@@ -1,15 +1,11 @@
 # device_settings_statuses
 
-A new Flutter plugin project.
+Very small flutter package to get live status information on a device's internet connection, airplane mode and DND mode stautsΩ
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Create an instance of ```DeviceSettingsStatuses()``` to begin listening to changes.
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```DeviceSettingsStatuses.onSettingsChange()``` will stream any change and return a status which will be of type ```DeviceSettingsStatusesType```.
 
+To listen to specific changes, call the methods ```listenAirplaneMode()```, ```listenInternetConnectivity()``` or ```listenDNDMode()```.
